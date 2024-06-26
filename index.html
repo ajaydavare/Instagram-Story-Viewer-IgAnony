@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iganony Instagram Story Viewer</title>
+    <style>
+        body {
+            font-family: 'Poppin', sans-serif;
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            width: 90%;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        .search-box {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 90%;
+            max-width: 500px;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #000000;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iganony Instagram Story Viewer</h1>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="instagramUrl" placeholder="Enter Instagram Story URL here">
+        </div>
+        <a href="https://iganonystory.com/" target="_blank">
+            <button>View Story</button>
+        </a>
+    </div>
+
+    <script>
+        function viewStory() {
+            var url = document.getElementById('instagramUrl').value;
+            if (url) {
+                // Redirect to the specified URL with the Instagram Story URL as a parameter
+                window.location.href = 'https://iganonystory.com/?url=' + encodeURIComponent(url);
+            } else {
+                alert('Please enter an Instagram Story URL.');
+            }
+        }
+    </script>
+</body>
+</html>
